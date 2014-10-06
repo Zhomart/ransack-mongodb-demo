@@ -45,3 +45,5 @@ gem 'mongoid', '~> 4.0.0'
 gem 'ransack', github: 'Zhomart/ransack', branch: 'mongoid'
 
 gem 'faker'
+
+gem 'rails_12factor', group: :production
