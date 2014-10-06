@@ -1,0 +1,49 @@
+<h1>Search Posts</h1>
+
+<%= search_form_for @q do |f| %>
+
+  <fieldset>
+    <legend>Post</legend>
+
+    <ul>
+      <li>
+        <%= f.label :title_cont %>
+        <%= f.search_field :title_cont %>
+      </li>
+      <li>
+        <%= f.label :title_or_body_cont %>
+        <%= f.search_field :title_or_body_cont %>
+      </li>
+    </ul>
+
+  </fieldset>
+
+  <%= f.submit %>
+<% end %>
+
+<pre>
+  <%= @posts.inspect %>
+</pre>
+
+<h2>Your first 10 results</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th>User</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.id %></td>
+        <td><%= post.title %></td>
+        <td><%= post.body %></td>
+        <td><%= post.user_info %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
