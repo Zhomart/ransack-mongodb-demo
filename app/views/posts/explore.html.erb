@@ -41,7 +41,7 @@
       <tr>
         <td><%= post.id %></td>
         <td><%= post.title %></td>
-        <td><%= post.body %></td>
+        <td><%= truncate post.body %></td>
         <td><%= post.user_info %></td>
       </tr>
     <% end %>
