@@ -43,3 +43,5 @@ gem 'spring',        group: :development
 gem 'mongoid', '~> 4.0.0'
 
 gem 'ransack', github: 'Zhomart/ransack', branch: 'mongoid'
+
+gem 'faker'
