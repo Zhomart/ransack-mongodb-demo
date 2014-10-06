@@ -14,6 +14,10 @@
         <%= f.label :title_or_body_cont %>
         <%= f.search_field :title_or_body_cont %>
       </li>
+      <li>
+        <%= f.label :user_id_in %>
+        <%= f.collection_select :user_id_in, User.all, :id, :info, {}, multiple: true %>
+      </li>
     </ul>
 
   </fieldset>
